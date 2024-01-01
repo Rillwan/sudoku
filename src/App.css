@@ -1,38 +1,58 @@
-.App {
+:root {
+  --white: rgb(255, 255, 255);
+  --black: rgb(0, 0, 0);
+  --primary-color: rgb(58, 36, 102);
+  --secondary-color: rgb(93, 53, 135);
+  --purple: rgb(162, 103, 176);
+  --pink: rgb(254, 209, 226);
+
+  --transition: all 400ms ease;
+}
+
+body {
+  color: var(--white);
+  background: var(--pink);
+}
+
+.heading {
   text-align: center;
+  font-weight: 100;
+  margin: 2rem 0;
+  font-size: 25px;
+  color: var(--black);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  width: 80%;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Game__body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  place-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (max-width:696px) {
+  .container {
+    width: 100%;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 10px;
+    letter-spacing: 0.3px;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ========= Footer ========== */
+.footer {
+  margin-top: 4rem;
+  background: var(--primary-color);
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.2px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  cursor: pointer;
 }

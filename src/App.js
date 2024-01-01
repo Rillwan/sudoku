@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Sudoko from "./components/Sudoko";
 
 function App() {
+  const instegram =  ()=>{
+    window.open("https://www.instagram.com/rillwan.tech/");
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App__header">
+        <div className="container">
+          <h3 className="heading">Sudoku Game</h3>
+          <div className="Game__body">
+            <Sudoko />
+          </div>
+        </div>
+      </div>
+      {/* ==== Footer ======= */}
+      <div className="footer" onClick={instegram}>
+        &copy;2023 India, All Rights Reserved by Rillwan.tech
+      </div>
     </div>
   );
 }
